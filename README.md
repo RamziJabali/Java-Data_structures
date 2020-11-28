@@ -76,6 +76,45 @@ ObjectName nameOfArray  [] = new ObjectName[2];
 //example
 Students studentNamesArray = new Student [20];//student is a user-defined class
 ```
+```
+public class Student {
+    public int studentNumber;
+    public String studentName;
 
+    Student(int studentNumber, String studentName){//two constraints
+        this.studentName = studentName;
+        this.studentNumber = studentNumber;
+    }
+}
+
+public class Tester {
+    private static Student studentsArray[] = new Student[5];//Array of object of type Student
+
+    public static void main(String[] main) {
+        arrayObjectTest();
+    }
+
+    private static void arrayObjectTest() {
+        studentsArray[0] = new Student(5, "Ramzi");//meets the requirements
+        studentsArray[1] = new Student(2, "Abdullah");
+        studentsArray[2] = new Student(6, "Sami");
+        studentsArray[3] = new Student(1, "GymLads");
+        studentsArray[4] = new Student(4, "Benjamin");
+
+for (int row = 0; row < studentsArray.length; row++) {
+            System.out.println("Student Number "+studentsArray[row].studentNumber+" Student name: "+studentsArray[row].studentName);
+        }
+
+    }
+  }
+}  
+
+Output:
+Student Number 5 Student name: Ramzi
+Student Number 2 Student name: Abdullah
+Student Number 6 Student name: Sami
+Student Number 1 Student name: GymLads
+Student Number 4 Student name: Benjamin
+```
 
 
