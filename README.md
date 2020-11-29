@@ -116,5 +116,16 @@ Student Number 6 Student name: Sami
 Student Number 1 Student name: GymLads
 Student Number 4 Student name: Benjamin
 ```
+Array cloning 
 
+Using the .clone() method for a one dimensional array will create deep copy, but if it is used for a two or more dimensional array it creates a shallow copy.
+```
+int intArray[] = {1,2,3}; 
+          
+int cloneArray[] = intArray.clone(); //deep copy
 
+int intArray[][] = { {1,2,3} , {4,5,6} }; 
+          
+int cloneArray[][] = intArray.clone(); //shallow copy
+
+```
