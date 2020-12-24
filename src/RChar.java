@@ -1,51 +1,107 @@
-public class RChar {
-    int rCharacter;
+public final class RChar implements Comparable<RChar> {
+    private int rCharacter;
+
+    public static RChar getFirtCharacter(String word) {
+        if (word.isEmpty()) {
+            return new RChar(0);
+        }
+        return new RChar(word.charAt(0));
+    }
 
     public RChar(int ascii) {
         rCharacter = ascii;
     }
 
-    public RChar(String word) {
-        rCharacter = convertToRChar(word);
-    }
-
     public RChar(char character) {
-        rCharacter = convertToRChar(character + "");
+        rCharacter = getAsciiValue(character + "");
     }
 
-    public Boolean isDigit() {
-        if (rCharacter >= 48 && rCharacter <= 57) {
-            return true;
-        }
-        return false;
+    private RChar(String letter) {
+        rCharacter = getAsciiValue(letter);
     }
 
-    public Boolean isLetter() {
-        if (rCharacter >= 65 && rCharacter <= 90 || rCharacter >= 97 && rCharacter <= 122) {
-            return true;
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof RChar)) {
+            return false;
         }
-        return false;
+        return ((RChar) obj).getValueOf() == rCharacter;
+    }
+
+    @Override
+    public int hashCode() {
+        return rCharacter;
+    }
+
+    @Override
+    public String toString() {
+        return getAsciiToString(rCharacter);
+    }
+
+    @Override
+    public int compareTo(RChar rChar) {
+        if (rCharacter < rChar.getValueOf()) {
+            return -1;
+        }
+        if (rCharacter == rChar.getValueOf()) {
+            return 0;
+        }
+        return 1;
+    }
+
+    public int getValueOf() {
+        return rCharacter;
     }
 
     public int toUpperCase() {
-        if (isLetter() && rCharacter >= 97 && rCharacter <= 122) {
+        if (!isLetter()) {
+            return rCharacter;
+        }
+        if (isUpperCase()) {
             return rCharacter - 32;
         }
         return rCharacter;
     }
 
+    public Boolean isDigit() {
+        return rCharacter >= 48 && rCharacter <= 57;
+    }
+
+    public Boolean isLetter() {
+        return rCharacter >= 65 && rCharacter <= 90 || rCharacter >= 97 && rCharacter <= 122;
+    }
+
+    public boolean isUpperCase() {
+        return rCharacter >= 97 && rCharacter <= 122;
+    }
+
     public int toLowerCase() {
-        if (isLetter() && rCharacter >= 65 && rCharacter <= 90) {
+        if (!isLetter()) {
+            return rCharacter;
+        }
+        if (isLowerCase()) {
             return rCharacter + 32;
         }
         return rCharacter;
     }
 
-    private int convertToRChar(String word) {
-        return characterToAscii(word);
+    public boolean isLowerCase() {
+        return rCharacter >= 65 && rCharacter <= 90;
     }
 
-    private String asciiToCharacter(int ascii) {
+    public boolean isEmpty() {
+        return rCharacter == 0;
+    }
+
+    public boolean isSpace() {
+        return rCharacter == 32;
+    }
+
+    private int getAsciiValue(String word) {
+        return getStringAsAscii(word);
+    }
+
+    private String getAsciiToString(int ascii) {
         String character = "";
         switch (ascii) {
             case 33:
@@ -334,7 +390,7 @@ public class RChar {
         return character;
     }
 
-    private int characterToAscii(String word) {
+    private int getStringAsAscii(String word) {
         int ascii = 0;
         switch (word) {
             case "!":
