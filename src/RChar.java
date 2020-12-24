@@ -6,11 +6,11 @@ public class RChar {
     }
 
     public RChar(String word) {
-        convertToRChar(word);
+        rCharacter = convertToRChar(word);
     }
 
     public RChar(char character) {
-        convertToRChar(character);
+        rCharacter = convertToRChar(character + "");
     }
 
     public Boolean isDigit() {
@@ -19,23 +19,30 @@ public class RChar {
         }
         return false;
     }
-    public Boolean isLetter(){
-        if (rCharacter >= 65 && rCharacter <= 90 ||rCharacter >= 97 && rCharacter <= 122) {
+
+    public Boolean isLetter() {
+        if (rCharacter >= 65 && rCharacter <= 90 || rCharacter >= 97 && rCharacter <= 122) {
             return true;
         }
         return false;
     }
 
-    public RChar toUpperCase() {
-        return null;
+    public int toUpperCase() {
+        if (isLetter() && rCharacter >= 97 && rCharacter <= 122) {
+            return rCharacter - 32;
+        }
+        return rCharacter;
     }
 
-    private void convertToRChar(String word) {
-        rCharacter = characterToAscii(word);
+    public int toLowerCase() {
+        if (isLetter() && rCharacter >= 65 && rCharacter <= 90) {
+            return rCharacter + 32;
+        }
+        return rCharacter;
     }
 
-    private void convertToRChar(Character character) {
-        rCharacter = characterToAscii(character.toString());
+    private int convertToRChar(String word) {
+        return characterToAscii(word);
     }
 
     private String asciiToCharacter(int ascii) {
