@@ -53,6 +53,10 @@ public final class RChar implements Comparable<RChar> {
         return rCharacter;
     }
 
+    public RString toRString() {
+        return new RString(this);
+    }
+
     public int toUpperCase() {
         if (!isLetter()) {
             return rCharacter;
