@@ -13,11 +13,11 @@ public final class RChar implements Comparable<RChar> {
     }
 
     public RChar(char character) {
-        rCharacter = getAsciiValue(character + "");
+        rCharacter = getStringAsAscii(character + "");
     }
 
     private RChar(String letter) {
-        rCharacter = getAsciiValue(letter);
+        rCharacter = getStringAsAscii(letter);
     }
 
     @Override
@@ -95,10 +95,6 @@ public final class RChar implements Comparable<RChar> {
 
     public boolean isSpace() {
         return rCharacter == 32;
-    }
-
-    private int getAsciiValue(String word) {
-        return getStringAsAscii(word);
     }
 
     private String getAsciiToString(int ascii) {
