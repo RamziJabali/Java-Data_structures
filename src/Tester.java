@@ -2,8 +2,9 @@ import javax.rmi.ssl.SslRMIClientSocketFactory;
 
 public class Tester {
     public static void main(String[] args) {
-        RChar test = new RChar(65);
-        RChar test2 = new RChar(97);
+        //System.out.print("MOE");
+//        RChar test = new RChar('s');
+//        RChar test2 = new RChar(97);
         RChar Cap[] = new RChar[5];
 //        System.out.println("Is this character a digit " + test.isDigit());
 //        System.out.println("Is this character a Letter " + test.isLetter());
