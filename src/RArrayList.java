@@ -67,11 +67,6 @@ public class RArrayList<T> {
             next = null;
         }
 
-        public Node(T data, Node next) {
-            this.next = next;
-            this.data = data;
-        }
-
         @Override
         public String toString() {
             return "" + data;
