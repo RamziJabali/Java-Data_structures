@@ -29,9 +29,10 @@ public class Tester {
         arrayList2.add("hello");
         System.out.println(arrayList.toString());
         System.out.println("List Size is: " + arrayList.getListSize());
+        System.out.println("List Size is: " + arrayList2.getListSize());
         System.out.println("String Array List Hashcode: " + arrayList.hashCode());
         System.out.println("String Array List Hashcode: " + arrayList2.hashCode());
-        System.out.println("Are both String ArrayLists Equal "+arrayList2.equals(arrayList));
+        System.out.println("Are both String ArrayLists Equal " + arrayList2.equals(arrayList));
         //RCHAR ARRAYLIST
         RArrayList<RChar> arrayList3 = new RArrayList<>();
         RArrayList<RChar> arrayList4 = new RArrayList<>();
@@ -41,22 +42,26 @@ public class Tester {
         arrayList4.add(test2);
         System.out.println(arrayList3.toString());
         System.out.println(arrayList4.toString());
-        System.out.println("List Size is: " + arrayList.getListSize());
+        System.out.println("List Size is: " + arrayList3.getListSize());
+        System.out.println("List Size is: " + arrayList4.getListSize());
         System.out.println("Rchar Array List Hashcode: " + arrayList3.hashCode());
         System.out.println("Rchar Array List Hashcode: " + arrayList4.hashCode());
-        System.out.println("Are both Rchar ArrayLists Equal "+arrayList3.equals(arrayList4));
+        System.out.println("Are both Rchar ArrayLists Equal " + arrayList3.equals(arrayList4));
         //RSTRING ARRAYLIST
         RArrayList<RString> arrayList5 = new RArrayList<>();
         RArrayList<RString> arrayList6 = new RArrayList<>();
-        RChar test3 = new RChar('s');
-        RChar test4 = new RChar(97);
-        arrayList3.add(test);
-        arrayList4.add(test2);
-        System.out.println(arrayList3.toString());
-        System.out.println(arrayList4.toString());
-        System.out.println("List Size is: " + arrayList.getListSize());
-        System.out.println("Rchar Array List Hashcode: " + arrayList3.hashCode());
-        System.out.println("Rchar Array List Hashcode: " + arrayList4.hashCode());
-        System.out.println("Are both Rchar ArrayLists Equal "+arrayList3.equals(arrayList4));
+        RString test3 = new RString("googly");
+        RString test4 = new RString("googly");
+        arrayList5.add(test3);
+        arrayList5.add(test3);
+        arrayList6.add(test4);
+        arrayList6.add(test4);
+        System.out.println(arrayList5.toString());
+        System.out.println(arrayList6.toString());
+        System.out.println("List Size is: " + arrayList5.getListSize());
+        System.out.println("List Size is: " + arrayList6.getListSize());
+        System.out.println("RString Array List Hashcode: " + arrayList5.hashCode());//HASHCODE TOO BIG FOR INT OR FLOAT
+        System.out.println("RString Array List Hashcode: " + arrayList6.hashCode());//HASHCODE TOO BIG FOR INT OR FLOAT
+        System.out.println("Are both RString ArrayLists Equal " + arrayList5.equals(arrayList6));
     }
 }
