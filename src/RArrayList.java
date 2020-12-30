@@ -34,6 +34,22 @@ public final class RArrayList<T> {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        return hashCode() == obj.hashCode();
+    }
+
+    @Override
+    public int hashCode() {
+        String linkedListHashCode = "";
+        Node node = head;
+        while (node != null) {
+            linkedListHashCode += node.data.hashCode();
+            node = node.next;
+        }
+        return Integer.parseInt(linkedListHashCode);
+    }
+
+    @Override
     public String toString() {
         String linkedList = "[";
         Node node = head;
