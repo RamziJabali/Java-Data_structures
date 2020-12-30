@@ -50,8 +50,8 @@ public class Tester {
         //RSTRING ARRAYLIST
         RArrayList<RString> arrayList5 = new RArrayList<>();
         RArrayList<RString> arrayList6 = new RArrayList<>();
-        RString test3 = new RString("googly");
-        RString test4 = new RString("googly");
+        RString test3 = new RString("googlyyyyyyyyyyy");
+        RString test4 = new RString("googlyyyyyyyyyy");
         arrayList5.add(test3);
         arrayList5.add(test3);
         arrayList6.add(test4);
@@ -60,8 +60,8 @@ public class Tester {
         System.out.println(arrayList6.toString());
         System.out.println("List Size is: " + arrayList5.getListSize());
         System.out.println("List Size is: " + arrayList6.getListSize());
-        System.out.println("RString Array List Hashcode: " + arrayList5.hashCode());//HASHCODE TOO BIG FOR INT OR FLOAT
-        System.out.println("RString Array List Hashcode: " + arrayList6.hashCode());//HASHCODE TOO BIG FOR INT OR FLOAT
+        System.out.println("RString Array List Hashcode: " + arrayList5.hashCode());
+        System.out.println("RString Array List Hashcode: " + arrayList6.hashCode());
         System.out.println("Are both RString ArrayLists Equal " + arrayList5.equals(arrayList6));
     }
 }

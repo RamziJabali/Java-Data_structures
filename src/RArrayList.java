@@ -39,14 +39,17 @@ public final class RArrayList<T> {
     }
 
     @Override
-    public int hashCode() throws NumberFormatException {
-        String linkedListHashCode = "";
+    public int hashCode() {
+        if (isEmpty()) {
+            return 0;
+        }
+        int linkedListHashCode = 0;
         Node node = head;
         while (node != null) {
             linkedListHashCode += node.data.hashCode();
             node = node.next;
         }
-        return Integer.parseInt(linkedListHashCode);
+        return linkedListHashCode;
     }
 
     @Override

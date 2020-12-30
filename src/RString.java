@@ -79,8 +79,10 @@ public final class RString implements Comparable<RString> {
     @Override
     public int hashCode() {
         int hashCode = 0;
+        int precidence = 0;
         for (int i = 0; i < getSize(); i++) {
-            hashCode = rString[i].getValueOf() * 31 ^ (getSize() - i);
+            precidence = (int) Math.pow(31, (getSize() - i));
+            hashCode += rString[i].getValueOf() * precidence;
         }
         return hashCode;
     }
