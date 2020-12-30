@@ -1,6 +1,4 @@
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.NoFixedFacet;
-
-public class RArrayList<T> {
+public final class RArrayList<T> {
     private Node head;
     private int listSize = 0;
 
@@ -14,30 +12,25 @@ public class RArrayList<T> {
 
     public void add(T data) {
         listSize++;
-        Node node = new Node(data);
-        if (isEmpty(head)) {
-            head = node;
+        final Node nodeToAdd = new Node(data);
+        if (isEmpty()) {
+            head = nodeToAdd;
             return;
         }
-        if (isEmpty(head.next)) {
-            head.next = node;
-            return;
-        }
-        Node newNode = add(head.next);
-        newNode.next = node;
+        Node lastNode = getLastNode();
+        lastNode.next = nodeToAdd;
     }
 
-    private Node add(Node nextNode) {
-        Node previousNode = null;
-        while (!isEmpty(nextNode)) {
-            previousNode = nextNode;
-            nextNode = nextNode.next;
+    public Node getLastNode() {
+        Node currentNode = head;
+        while (currentNode.next != null) {
+            currentNode = currentNode.next;
         }
-        return previousNode;
+        return currentNode;
     }
 
-    private boolean isEmpty(Node node) {
-        return node == null;
+    public boolean isEmpty() {
+        return head == null;
     }
 
     @Override
@@ -45,7 +38,7 @@ public class RArrayList<T> {
         String linkedList = "[";
         Node node = head;
         while (node != null) {
-            linkedList += (node);
+            linkedList += node.toString();
             linkedList += ",";
             node = node.next;
         }
@@ -54,7 +47,6 @@ public class RArrayList<T> {
             linkedList = linkedList.substring(0, linkedList.length() - 1);
         }
         linkedList += ']';
-
         return linkedList;
     }
 
@@ -69,7 +61,7 @@ public class RArrayList<T> {
 
         @Override
         public String toString() {
-            return "" + data;
+            return data.toString();
         }
     }
 
