@@ -33,6 +33,7 @@ public final class RArrayList<T> {
         return head == null;
     }
 
+
     @Override
     public boolean equals(Object obj) {
         return hashCode() == obj.hashCode();

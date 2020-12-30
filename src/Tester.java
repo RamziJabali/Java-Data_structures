@@ -1,18 +1,8 @@
 public class Tester {
     public static void main(String[] args) {
-//        //System.out.print("MOE");
-////        System.out.println("Is this character a digit " + test.isDigit());
-////        System.out.println("Is this character a Letter " + test.isLetter());
-////        System.out.println("Give me ASCII of 97(a) to uppercase " + test.toUpperCase());
-////        System.out.println("Give me ASCII of 65(A) to lowercase " + test2.toLowerCase());
-////        System.out.println("size of array " + Cap.length);
-//
-//        RString r = new RString("hfllo");
-//        RString string = new RString(Cap);
-//        System.out.println(string.hashCode());
-//        System.out.println(Integer.MAX_VALUE);
-//        System.out.println(r.compareTo(r2));
-//        System.out.println(r.equals(r2));
+        RString r = new RString("hello");
+        RString string = new RString("hfllo");
+        System.out.println(r.compareTo(string));
 //
 //        ArrayList<String> arrayList = new ArrayList();
         RString r2 = new RString("hello");
@@ -26,6 +16,8 @@ public class Tester {
         RArrayList<String> arrayList = new RArrayList<>();
         RArrayList<String> arrayList2 = new RArrayList<>();
         arrayList.add("hello");
+        arrayList2.add("hello");
+        arrayList.add("hell");
         arrayList2.add("hello");
         System.out.println(arrayList.toString());
         System.out.println("List Size is: " + arrayList.getListSize());
