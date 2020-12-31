@@ -1,8 +1,8 @@
 public class Tester {
     public static void main(String[] args) {
         RString r = new RString("hello");
-        RString string = new RString("hfllo");
-        System.out.println(r.compareTo(string));
+        RString string = new RString("hello");
+        System.out.println(r.equals(string));
 //
 //        ArrayList<String> arrayList = new ArrayList();
         RString r2 = new RString("hello");

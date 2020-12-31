@@ -111,6 +111,6 @@ public final class RString implements Comparable<RString> {
         if (!(obj instanceof RString)) {
             return false;
         }
-        return hashCode() == obj.hashCode();
+        return ((RString) obj).compareTo(this) == 0;
     }
 }
