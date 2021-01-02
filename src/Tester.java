@@ -42,10 +42,13 @@ public class Tester {
         //RSTRING ARRAYLIST
         RArrayList<RString> arrayList5 = new RArrayList<>();
         RArrayList<RString> arrayList6 = new RArrayList<>();
-        RString test3 = new RString("googlyyyyyyyyyyy");
+        RString test3 = new RString("hi");
         RString test4 = new RString("googlyyyyyyyyyy");
+        RString test5 = new RString("I'm");
+        RString test6 = new RString("Ramzi");
         arrayList5.add(test3);
-        arrayList5.add(test3);
+        arrayList5.add(test5);
+        arrayList5.add(test6);
         arrayList6.add(test4);
         arrayList6.add(test4);
         System.out.println(arrayList5.toString());
@@ -55,5 +58,11 @@ public class Tester {
         System.out.println("RString Array List Hashcode: " + arrayList5.hashCode());
         System.out.println("RString Array List Hashcode: " + arrayList6.hashCode());
         System.out.println("Are both RString ArrayLists Equal " + arrayList5.equals(arrayList6));
+
+        System.out.println(arrayList5);
+        System.out.println("get node at index 0 " + arrayList5.getNodeAt(0));
+        System.out.println("get node at index 1 " + arrayList5.getNodeAt(1));
+        System.out.println("get node at index 2 " + arrayList5.getNodeAt(2));
+
     }
 }
