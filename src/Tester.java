@@ -44,13 +44,13 @@ public class Tester {
         RArrayList<RString> arrayList6 = new RArrayList<>();
         RString test3 = new RString("hi");
         RString test4 = new RString("googlyyyyyyyyyy");
+        RString test7 = new RString("Moggllyyy");
         RString test5 = new RString("I'm");
         RString test6 = new RString("Ramzi");
         arrayList5.add(test3);
         arrayList5.add(test5);
-        arrayList5.add(test6);
-        arrayList6.add(test4);
-        arrayList6.add(test4);
+        arrayList6.add(test3);
+        arrayList6.add(test5);
         System.out.println(arrayList5.toString());
         System.out.println(arrayList6.toString());
         System.out.println("List Size is: " + arrayList5.getListSize());
@@ -62,7 +62,8 @@ public class Tester {
         System.out.println(arrayList5);
         System.out.println("get node at index 0 " + arrayList5.getNodeAt(0));
         System.out.println("get node at index 1 " + arrayList5.getNodeAt(1));
-        System.out.println("get node at index 2 " + arrayList5.getNodeAt(2));
-
+        System.out.println("ArrayList 1 " + arrayList5);
+        System.out.println("ArrayList 2 " + arrayList6);
+        System.out.println("Is ArrayList1 equal to ArrayList 2 " + arrayList5.equals(arrayList6));
     }
 }

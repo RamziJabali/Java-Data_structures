@@ -1,6 +1,6 @@
-public final class RArrayList<T> implements Comparable {
+public final class RArrayList<T> {
     private Node head;
-    private int listSize = -1;
+    private int listSize = 0;
 
     public RArrayList() {
         head = null;
@@ -50,7 +50,19 @@ public final class RArrayList<T> implements Comparable {
 
     @Override
     public boolean equals(Object obj) {
-        return hashCode() == obj.hashCode();
+        if (((RArrayList) obj).getListSize() != getListSize()) {
+            return false;
+        }
+        Node nodeThis = head;
+        Node nodeAway = ((RArrayList) obj).head;
+        for (int i = 0; i < getListSize(); i++) {
+            if (!(nodeThis.data.equals(nodeAway.data))) {
+                return false;
+            }
+            nodeAway = nodeAway.next;
+            nodeThis = nodeThis.next;
+        }
+        return true;
     }
 
     @Override
@@ -84,19 +96,7 @@ public final class RArrayList<T> implements Comparable {
         return linkedList;
     }
 
-    @Override
-    public int compareTo(Object o) {
-        Node node = head;
-        while (node != null) {
-//            if (node.data == o.get) {
-
-//            }
-            node = node.next;
-        }
-        return 0;
-    }
-
-    class Node {
+    private class Node {
         T data;
         Node next;
 
