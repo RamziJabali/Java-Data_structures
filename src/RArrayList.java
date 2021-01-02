@@ -10,6 +10,10 @@ public final class RArrayList<T> {
         return listSize;
     }
 
+    public void clearArrayList() {
+        head = null;
+    }
+
     public void add(T data) {
         listSize++;
         final Node nodeToAdd = new Node(data);
@@ -27,6 +31,10 @@ public final class RArrayList<T> {
             currentNode = currentNode.next;
         }
         return currentNode;
+    }
+
+    public Node getFirstNode() {
+        return head;
     }
 
     public Node getNodeAt(int index) {

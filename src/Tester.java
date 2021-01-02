@@ -65,5 +65,9 @@ public class Tester {
         System.out.println("ArrayList 1 " + arrayList5);
         System.out.println("ArrayList 2 " + arrayList6);
         System.out.println("Is ArrayList1 equal to ArrayList 2 " + arrayList5.equals(arrayList6));
+        arrayList6.clearArrayList();
+        test3 = new RString("I cleared the List");
+        arrayList6.add(test3);
+        System.out.println("Is ArrayList2" + arrayList6);
     }
 }
