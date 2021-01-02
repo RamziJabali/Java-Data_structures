@@ -17,14 +17,34 @@ public final class RArrayList<T> {
         }
         RArrayList<T> reverseArrayList = new RArrayList<T>();
         for (int i = listSize - 1; i >= 0; i--) {
-            reverseArrayList.add(getNodeAt(i).data);
+            reverseArrayList.add(getAtIndex(i).data);
         }
         return reverseArrayList;
     }
 
-    public void clearArrayList() {
+    public void removeAll() {
         head = null;
         listSize = 0;
+    }
+
+    public Node removeAtIndex(int index) {
+        if (getListSize() < index) {
+            return null;
+        }
+        listSize--;
+        Node toBeRemoved = null;
+        Node node = head;
+        if (index == 0) {
+            toBeRemoved = head;
+            head = head.next;
+            return toBeRemoved;
+        }
+        for (int i = 0; i < index-1; i++) {
+            node = node.next;
+        }
+        toBeRemoved = node.next;
+        node.next= node.next.next;
+        return toBeRemoved;
     }
 
     public void add(T data) {
@@ -34,11 +54,11 @@ public final class RArrayList<T> {
             head = nodeToAdd;
             return;
         }
-        Node lastNode = getLastNode();
+        Node lastNode = getLast();
         lastNode.next = nodeToAdd;
     }
 
-    public Node getLastNode() {
+    public Node getLast() {
         Node currentNode = head;
         while (currentNode.next != null) {
             currentNode = currentNode.next;
@@ -46,11 +66,11 @@ public final class RArrayList<T> {
         return currentNode;
     }
 
-    public Node getFirstNode() {
+    public Node getFirst() {
         return head;
     }
 
-    public Node getNodeAt(int index) {
+    public Node getAtIndex(int index) {
         if (getListSize() < index) {
             return null;
         }

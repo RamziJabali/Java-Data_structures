@@ -60,12 +60,12 @@ public class Tester {
         System.out.println("Are both RString ArrayLists Equal " + arrayList5.equals(arrayList6));
 
         System.out.println(arrayList5);
-        System.out.println("get node at index 0 " + arrayList5.getNodeAt(0));
-        System.out.println("get node at index 1 " + arrayList5.getNodeAt(1));
+        System.out.println("get node at index 0 " + arrayList5.getAtIndex(0));
+        System.out.println("get node at index 1 " + arrayList5.getAtIndex(1));
         System.out.println("ArrayList 1 " + arrayList5);
         System.out.println("ArrayList 2 " + arrayList6);
         System.out.println("Is ArrayList1 equal to ArrayList 2 " + arrayList5.equals(arrayList6));
-        arrayList6.clearArrayList();
+        arrayList6.removeAll();
         test3 = new RString("I cleared the List");
         arrayList6.add(test3);
         System.out.println("Is ArrayList2: " + arrayList6);
@@ -73,5 +73,8 @@ public class Tester {
         arrayList6.add(test5);
         System.out.println("Is ArrayList2 in reverse " + arrayList6.getReverseArrayList());
         System.out.println("Is ArrayList2: " + arrayList6);
+        System.out.println("Is ArrayList2 with index 2 removed: " + arrayList6.removeAtIndex(2));
+        System.out.println("Is ArrayList2 " + arrayList6);
+        System.out.println("Is ArrayList2 size " + arrayList6.getListSize());
     }
 }
