@@ -71,10 +71,16 @@ public class Tester {
         System.out.println("Is ArrayList2: " + arrayList6);
         arrayList6.add(test4);
         arrayList6.add(test5);
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
         System.out.println("Is ArrayList2 in reverse " + arrayList6.getReverseArrayList());
         System.out.println("Is ArrayList2: " + arrayList6);
-        System.out.println("Is ArrayList2 with index 2 removed: " + arrayList6.removeAtIndex(2));
-        System.out.println("Is ArrayList2 " + arrayList6);
+        System.out.println("Is ArrayList2 data to be removed: " + arrayList6.removeData(test3));
+        System.out.println("ArrayList2 " + arrayList6);
         System.out.println("Is ArrayList2 size " + arrayList6.getListSize());
     }
 }

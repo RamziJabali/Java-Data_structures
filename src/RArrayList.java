@@ -39,11 +39,42 @@ public final class RArrayList<T> {
             head = head.next;
             return toBeRemoved;
         }
-        for (int i = 0; i < index-1; i++) {
+        for (int i = 0; i < index - 1; i++) {
             node = node.next;
         }
         toBeRemoved = node.next;
-        node.next= node.next.next;
+        node.next = node.next.next;
+        return toBeRemoved;
+    }
+
+    public Node removeData(T data) {
+        Node toBeRemoved = null;
+        if (head.data.equals(data)) {
+            toBeRemoved = head;
+            head = head.next;
+            listSize--;
+            return toBeRemoved;
+        }
+        if (getLast().data.equals(data)) {
+            return removeAtIndex(listSize - 1);
+        }
+        Node previous = null;
+        Node node = head.next;
+        for (int i = 0; i < getListSize(); i++) {
+            previous = head;
+            if (node.data.equals(data)) {
+                break;
+            }
+            previous = previous.next;
+            node = node.next;
+        }
+        if (previous == null) {
+            return null;
+        }
+        toBeRemoved = node;
+        System.out.println("Previous node: "+previous);
+        previous.next = previous.next.next;
+        listSize--;
         return toBeRemoved;
     }
 
