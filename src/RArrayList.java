@@ -10,8 +10,21 @@ public final class RArrayList<T> {
         return listSize;
     }
 
+    public RArrayList getReverseArrayList() {
+        Node node = head;
+        if (listSize == 1) {
+            return this;
+        }
+        RArrayList<T> reverseArrayList = new RArrayList<T>();
+        for (int i = listSize - 1; i >= 0; i++) {
+            reverseArrayList.add(getNodeAt(i).data);
+        }
+        return reverseArrayList;
+    }
+
     public void clearArrayList() {
         head = null;
+        listSize = 0;
     }
 
     public void add(T data) {

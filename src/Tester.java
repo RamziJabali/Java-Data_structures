@@ -69,5 +69,7 @@ public class Tester {
         test3 = new RString("I cleared the List");
         arrayList6.add(test3);
         System.out.println("Is ArrayList2" + arrayList6);
+        System.out.println("Is ArrayList2 in reverse " + arrayList6.getReverseArrayList());
+        System.out.println("Is ArrayList2" + arrayList6);
     }
 }
