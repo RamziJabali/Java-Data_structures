@@ -16,7 +16,7 @@ public final class RArrayList<T> {
             return this;
         }
         RArrayList<T> reverseArrayList = new RArrayList<T>();
-        for (int i = listSize - 1; i >= 0; i++) {
+        for (int i = listSize - 1; i >= 0; i--) {
             reverseArrayList.add(getNodeAt(i).data);
         }
         return reverseArrayList;
