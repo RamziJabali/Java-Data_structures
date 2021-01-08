@@ -1,7 +1,7 @@
 public final class RChar implements Comparable<RChar> {
     private int rCharacter;
 
-    public static RChar getFirtCharacter(String word) {
+    public static RChar getFirstCharacter(String word) {
         if (word.isEmpty()) {
             return new RChar(0);
         }
@@ -51,10 +51,6 @@ public final class RChar implements Comparable<RChar> {
 
     public int getValueOf() {
         return rCharacter;
-    }
-
-    public RString toRString() {
-        return new RString(this);
     }
 
     public int toUpperCase() {
