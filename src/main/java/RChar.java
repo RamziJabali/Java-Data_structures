@@ -57,7 +57,7 @@ public final class RChar implements Comparable<RChar> {
         if (!isLetter()) {
             return rCharacter;
         }
-        if (isUpperCase()) {
+        if (isLowerCase()) {
             return rCharacter - 32;
         }
         return rCharacter;
@@ -71,7 +71,7 @@ public final class RChar implements Comparable<RChar> {
         return rCharacter >= 65 && rCharacter <= 90 || rCharacter >= 97 && rCharacter <= 122;
     }
 
-    public boolean isUpperCase() {
+    public boolean isLowerCase() {
         return rCharacter >= 97 && rCharacter <= 122;
     }
 
@@ -79,18 +79,18 @@ public final class RChar implements Comparable<RChar> {
         if (!isLetter()) {
             return rCharacter;
         }
-        if (isLowerCase()) {
+        if (isUpperCase()) {
             return rCharacter + 32;
         }
         return rCharacter;
     }
 
-    public boolean isLowerCase() {
+    public boolean isUpperCase() {
         return rCharacter >= 65 && rCharacter <= 90;
     }
 
     public boolean isEmpty() {
-        return rCharacter == 0;
+        return isSpace();
     }
 
     public boolean isSpace() {
@@ -100,6 +100,8 @@ public final class RChar implements Comparable<RChar> {
     private String getAsciiToString(int ascii) {
         String character = "";
         switch (ascii) {
+            case 32:
+                character = " ";
             case 33:
                 character = "!";
                 break;
@@ -389,6 +391,9 @@ public final class RChar implements Comparable<RChar> {
     private int getStringAsAscii(String word) {
         int ascii = 0;
         switch (word) {
+            case " ":
+                ascii = 32;
+                break;
             case "!":
                 ascii = 33;
                 break;
