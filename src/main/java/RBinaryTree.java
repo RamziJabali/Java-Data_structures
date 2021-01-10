@@ -35,10 +35,34 @@ public class RBinaryTree<T extends Comparable<T>> {
         findNode(root, new Node(data));
         return aBoolean;
     }
-    public Node removeNode(Node nodeToBeRemoved){
-
-        return null;
+    public Node removeData(T data) { 
+        if (!doesContain(data)) {
+            return null;
+        }
+        Node toBeRemoved = new Node(data);
+        if (root.equals(toBeRemoved)) {
+            if (root.left == null && root.right == null) {
+                root = null;
+                return toBeRemoved;
+            }
+            if(root.right == null){
+                root = root.left;
+                return toBeRemoved;
+            }
+            root = root.right;
+            return toBeRemoved;
+        }
+        return removeDataHelper(new Node(data), root);
     }
+
+    private Node removeDataHelper(Node toBeRemoved, Node currentNode) {
+        Node placeHolder = root;
+        if (toBeRemoved.equals(currentNode)) {
+
+        }
+        return toBeRemoved;
+    }
+
 
     private void findNode(Node currentNode, Node toBeFound) {
         if (currentNode == null) {

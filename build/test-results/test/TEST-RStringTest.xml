@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RStringTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2021-01-08T10:33:27" hostname="Ramzis-iMac.local" time="0.004">
+<testsuite name="RStringTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2021-01-10T05:15:23" hostname="RAMZIEL-JABALI" time="0.256">
   <properties/>
-  <testcase name="testCompareTo1" classname="RStringTest" time="0.001"/>
-  <testcase name="testCompareTo2" classname="RStringTest" time="0.0"/>
-  <testcase name="testCompareTo3" classname="RStringTest" time="0.0"/>
-  <testcase name="testGetSize" classname="RStringTest" time="0.0"/>
-  <testcase name="testGetRCharArray" classname="RStringTest" time="0.001"/>
-  <testcase name="testisEmpty" classname="RStringTest" time="0.0"/>
-  <testcase name="testHashCode" classname="RStringTest" time="0.0"/>
-  <testcase name="testEquals" classname="RStringTest" time="0.0"/>
-  <testcase name="testGetReverse" classname="RStringTest" time="0.0"/>
+  <testcase name="testCompareTo1" classname="RStringTest" time="0.003"/>
+  <testcase name="testCompareTo2" classname="RStringTest" time="0.008"/>
+  <testcase name="testCompareTo3" classname="RStringTest" time="0.003"/>
+  <testcase name="testGetSize" classname="RStringTest" time="0.003"/>
+  <testcase name="testGetRCharArray" classname="RStringTest" time="0.004"/>
+  <testcase name="testisEmpty" classname="RStringTest" time="0.028"/>
+  <testcase name="testHashCode" classname="RStringTest" time="0.003"/>
+  <testcase name="testEquals" classname="RStringTest" time="0.001"/>
+  <testcase name="testGetReverse" classname="RStringTest" time="0.182"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
