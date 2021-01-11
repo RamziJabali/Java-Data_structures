@@ -35,32 +35,77 @@ public class RBinaryTree<T extends Comparable<T>> {
         findNode(root, new Node(data));
         return aBoolean;
     }
-    public Node removeData(T data) { 
+
+    public Node removeData(T data) {
         if (!doesContain(data)) {
             return null;
         }
-        Node toBeRemoved = new Node(data);
-        if (root.equals(toBeRemoved)) {
-            if (root.left == null && root.right == null) {
-                root = null;
-                return toBeRemoved;
-            }
-            if(root.right == null){
-                root = root.left;
-                return toBeRemoved;
-            }
-            root = root.right;
-            return toBeRemoved;
-        }
-        return removeDataHelper(new Node(data), root);
+        removeDataHelper(new Node(data), root, root);
+        return new Node(data);
     }
 
-    private Node removeDataHelper(Node toBeRemoved, Node currentNode) {
-        Node placeHolder = root;
-        if (toBeRemoved.equals(currentNode)) {
-
+    private void removeDataHelper(Node toBeRemoved, Node currentNode, Node prev) {
+        Node previousNode = prev;
+        if (!(currentNode.compareTo(toBeRemoved) == 0)) {
+            previousNode = currentNode;
         }
-        return toBeRemoved;
+        if (!(currentNode.compareTo(toBeRemoved) == 0)) {
+            previousNode = currentNode;
+        }
+        if (currentNode.left != null && toBeRemoved.compareTo(currentNode) < 0) {
+            removeDataHelper(toBeRemoved, currentNode.left, previousNode);
+        }
+        if (currentNode.right != null && toBeRemoved.compareTo(currentNode) > 0) {
+            removeDataHelper(toBeRemoved, currentNode.right, previousNode);
+        }
+        //if it's a leaf no children
+        if (currentNode.left == null && currentNode.right == null) {
+            if (previousNode.compareTo(currentNode) > 0) {
+                previousNode.left = null;
+                return;
+            }
+            if (previousNode.compareTo(currentNode) < 0) {
+                previousNode.right = null;
+                return;
+            }
+            currentNode.data = null;
+            return;
+        }
+        //if tree only has one leaf(only right leaf)
+        if (currentNode.left == null) {
+            if (previousNode.compareTo(currentNode) > 0) {
+                previousNode.left = null;
+                previousNode.left = currentNode.right;
+                return;
+            }
+            if (previousNode.compareTo(currentNode) < 0) {
+                previousNode.right = null;
+                previousNode.right = currentNode.right;
+                return;
+            }
+        }
+        //if tree only has one leaf(only left leaf)
+        if (currentNode.right == null) {
+            if (previousNode.compareTo(currentNode) > 0) {
+                previousNode.left = null;
+                previousNode.left = currentNode.left;
+                return;
+            }
+            if (previousNode.compareTo(currentNode) < 0) {
+                previousNode.right = null;
+                previousNode.right = currentNode.left;
+                return;
+            }
+        }
+    }
+
+    private T minValue(Node root) {
+        T minValue = root.data;
+        while (root.left != null) {
+            minValue = root.left.data;
+            root = root.left;
+        }
+        return minValue;
     }
 
 

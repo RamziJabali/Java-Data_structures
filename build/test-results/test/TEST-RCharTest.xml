@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RCharTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2021-01-10T05:15:23" hostname="RAMZIEL-JABALI" time="0.204">
+<testsuite name="RCharTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2021-01-11T02:24:34" hostname="Ramzis-iMac.local" time="0.003">
   <properties/>
-  <testcase name="testEquals2" classname="RCharTest" time="0.022"/>
+  <testcase name="testEquals2" classname="RCharTest" time="0.0"/>
   <testcase name="testToLowerCase" classname="RCharTest" time="0.0"/>
-  <testcase name="testCompareTo2" classname="RCharTest" time="0.001"/>
+  <testcase name="testCompareTo2" classname="RCharTest" time="0.0"/>
   <testcase name="testCompareTo3" classname="RCharTest" time="0.0"/>
   <testcase name="testToUpperCase" classname="RCharTest" time="0.0"/>
   <testcase name="testCompareTo" classname="RCharTest" time="0.0"/>
   <testcase name="testisEmpty" classname="RCharTest" time="0.0"/>
   <testcase name="testIsLowerCase" classname="RCharTest" time="0.0"/>
   <testcase name="testIsDigit2" classname="RCharTest" time="0.0"/>
-  <testcase name="testIsLetter2" classname="RCharTest" time="0.004"/>
-  <testcase name="testGetFirstCharacter" classname="RCharTest" time="0.001"/>
-  <testcase name="testIsLetter" classname="RCharTest" time="0.066"/>
-  <testcase name="testGetValueOf" classname="RCharTest" time="0.001"/>
-  <testcase name="testIsUpperCase" classname="RCharTest" time="0.025"/>
-  <testcase name="testHashCode" classname="RCharTest" time="0.001"/>
-  <testcase name="testEquals" classname="RCharTest" time="0.001"/>
-  <testcase name="testIsDigit" classname="RCharTest" time="0.002"/>
-  <testcase name="testIsSpace" classname="RCharTest" time="0.003"/>
+  <testcase name="testIsLetter2" classname="RCharTest" time="0.0"/>
+  <testcase name="testGetFirstCharacter" classname="RCharTest" time="0.0"/>
+  <testcase name="testIsLetter" classname="RCharTest" time="0.0"/>
+  <testcase name="testGetValueOf" classname="RCharTest" time="0.0"/>
+  <testcase name="testIsUpperCase" classname="RCharTest" time="0.001"/>
+  <testcase name="testHashCode" classname="RCharTest" time="0.0"/>
+  <testcase name="testEquals" classname="RCharTest" time="0.0"/>
+  <testcase name="testIsDigit" classname="RCharTest" time="0.0"/>
+  <testcase name="testIsSpace" classname="RCharTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

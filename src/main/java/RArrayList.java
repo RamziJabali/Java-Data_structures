@@ -49,20 +49,20 @@ public final class RArrayList<T> {
 
     public Node removeData(T data) {
         Node toBeRemoved = null;
-        if (head.data.equals(data)) {
+        if (head.equals(data)) {
             toBeRemoved = head;
             head = head.next;
             listSize--;
             return toBeRemoved;
         }
-        if (getLast().data.equals(data)) {
+        if (getLast().equals(data)) {
             return removeAtIndex(listSize - 1);
         }
         Node previous = null;
         Node node = head.next;
         for (int i = 0; i < getListSize(); i++) {
             previous = head;
-            if (node.data.equals(data)) {
+            if (node.equals(data)) {
                 break;
             }
             previous = previous.next;
@@ -72,7 +72,7 @@ public final class RArrayList<T> {
             return null;
         }
         toBeRemoved = node;
-        System.out.println("Previous node: "+previous);
+        System.out.println("Previous node: " + previous);
         previous.next = previous.next.next;
         listSize--;
         return toBeRemoved;
@@ -85,8 +85,7 @@ public final class RArrayList<T> {
             head = nodeToAdd;
             return;
         }
-        Node lastNode = getLast();
-        lastNode.next = nodeToAdd;
+        getLast().next = nodeToAdd;
     }
 
     public Node getLast() {

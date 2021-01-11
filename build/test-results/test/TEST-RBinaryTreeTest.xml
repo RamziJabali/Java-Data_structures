@@ -1,8 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RBinaryTreeTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-01-10T05:15:23" hostname="RAMZIEL-JABALI" time="0.006">
+<testsuite name="RBinaryTreeTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-01-11T02:24:34" hostname="Ramzis-iMac.local" time="0.007">
   <properties/>
-  <testcase name="testDoesContain2" classname="RBinaryTreeTest" time="0.005"/>
+  <testcase name="testRemoveChildlessLeaf" classname="RBinaryTreeTest" time="0.001"/>
+  <testcase name="testDoesContain2" classname="RBinaryTreeTest" time="0.0"/>
   <testcase name="testDoesContain" classname="RBinaryTreeTest" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="testRemoveNodeWithOnlyOneChildOnTheRight" classname="RBinaryTreeTest" time="0.0"/>
+  <testcase name="testRemoveNodeWithOnlyOneChildOnTheLeft" classname="RBinaryTreeTest" time="0.005"/>
+  <system-out><![CDATA[
+                              9
+
+                    8
+
+          7
+
+                    4
+
+                              3
+
+2
+
+                    1
+
+          0
+
+                    -1
+
+                              9
+
+                    8
+
+          7
+
+                    3
+
+2
+
+                    1
+
+          0
+
+                    -1
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
