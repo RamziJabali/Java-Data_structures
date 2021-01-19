@@ -17,7 +17,7 @@ public final class RArrayList<T> {
         }
         RArrayList<T> reverseArrayList = new RArrayList<T>();
         for (int i = listSize - 1; i >= 0; i--) {
-            reverseArrayList.add(getAtIndex(i).data);
+            reverseArrayList.add(getAtIndex(i));
         }
         return reverseArrayList;
     }
@@ -27,7 +27,7 @@ public final class RArrayList<T> {
         listSize = 0;
     }
 
-    public Node removeAtIndex(int index) {
+    public T removeAtIndex(int index) {
         if (getListSize() < index) {
             return null;
         }
@@ -37,25 +37,25 @@ public final class RArrayList<T> {
         if (index == 0) {
             toBeRemoved = head;
             head = head.next;
-            return toBeRemoved;
+            return toBeRemoved.data;
         }
         for (int i = 0; i < index - 1; i++) {
             node = node.next;
         }
         toBeRemoved = node.next;
         node.next = node.next.next;
-        return toBeRemoved;
+        return toBeRemoved.data;
     }
 
-    public Node removeData(T data) {
+    public T removeData(T data) {
         Node toBeRemoved = null;
         if (head.equals(data)) {
             toBeRemoved = head;
             head = head.next;
             listSize--;
-            return toBeRemoved;
+            return toBeRemoved.data;
         }
-        if (getLast().equals(data)) {
+        if (getLastNode().equals(data)) {
             return removeAtIndex(listSize - 1);
         }
         Node previous = null;
@@ -75,7 +75,7 @@ public final class RArrayList<T> {
         System.out.println("Previous node: " + previous);
         previous.next = previous.next.next;
         listSize--;
-        return toBeRemoved;
+        return toBeRemoved.data;
     }
 
     public void add(T data) {
@@ -85,10 +85,13 @@ public final class RArrayList<T> {
             head = nodeToAdd;
             return;
         }
-        getLast().next = nodeToAdd;
+        getLastNode().next = nodeToAdd;
     }
 
-    public Node getLast() {
+    public T getLast(){
+        return getLastNode().data;
+    }
+    private Node getLastNode() {
         Node currentNode = head;
         while (currentNode.next != null) {
             currentNode = currentNode.next;
@@ -96,22 +99,22 @@ public final class RArrayList<T> {
         return currentNode;
     }
 
-    public Node getFirst() {
-        return head;
+    public T getFirst() {
+        return head.data;
     }
 
-    public Node getAtIndex(int index) {
+    public T getAtIndex(int index) {
         if (getListSize() < index) {
             return null;
         }
         Node node = head;
         if (index == 0) {
-            return node;
+            return node.data;
         }
         for (int i = 0; i < index; i++) {
             node = node.next;
         }
-        return node;
+        return node.data;
     }
 
     public boolean isEmpty() {
@@ -174,6 +177,11 @@ public final class RArrayList<T> {
         public Node(T data) {
             this.data = data;
             next = null;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            return obj.equals(data);
         }
 
         @Override

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RArrayListTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2021-01-19T09:01:25" hostname="Ramzis-iMac.local" time="0.008">
+  <properties/>
+  <testcase name="testGetFirst" classname="RArrayListTest" time="0.001"/>
+  <testcase name="testGetListSize" classname="RArrayListTest" time="0.001"/>
+  <testcase name="testAdd" classname="RArrayListTest" time="0.0"/>
+  <testcase name="testToString" classname="RArrayListTest" time="0.0"/>
+  <testcase name="testGetLast" classname="RArrayListTest" time="0.0"/>
+  <testcase name="testGetAtIndexLast" classname="RArrayListTest" time="0.0"/>
+  <testcase name="testGetAtIndexCenter" classname="RArrayListTest" time="0.001"/>
+  <testcase name="testRemoveAtIndexCenter" classname="RArrayListTest" time="0.0"/>
+  <testcase name="testRemoveData" classname="RArrayListTest" time="0.0"/>
+  <testcase name="testGetReverseArrayList" classname="RArrayListTest" time="0.0"/>
+  <testcase name="testRemoveAtIndexLast" classname="RArrayListTest" time="0.0"/>
+  <testcase name="testRemoveAtIndexZero" classname="RArrayListTest" time="0.0"/>
+  <testcase name="testIsEmpty" classname="RArrayListTest" time="0.0"/>
+  <testcase name="testRemoveAll" classname="RArrayListTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
