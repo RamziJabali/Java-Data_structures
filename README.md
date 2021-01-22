@@ -19,7 +19,12 @@ This poject was to replicate Java built-in data structures for educational purpo
 - toLowerCase()
 - toUpperCase()
   
-  
+### RString
+- getRCharArray()
+- getSize()
+- getReverse()
+- isEmpty()
+
 ### RArrayList<T>
 - add(T)
 - removeData(T)
@@ -30,5 +35,13 @@ This poject was to replicate Java built-in data structures for educational purpo
 - getFirst()
 - getAtIndex(int)
 - isEmpty()
- 
- 
+  
+### RBinaryTree<T>
+- insert(T)
+- doesContain(T)  
+- removeData(T)
+- showTree()
+
+### JUnit Tests
+- Wrote JUnit tests for all classes and methods.
+
