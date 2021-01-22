@@ -1,6 +1,6 @@
 <h1 align="center">Java Data Structures</h1>
 <p align="center">
-  <a href="https://github.com/skydoves/Pokedex/actions"><img alt="Build Status" src="https://github.com/skydoves/Pokedex/workflows/Android%20CI/badge.svg"/></a> 
+  <a href="https://github.com/RamziJabali/Java-Data-Structures/actions"><img alt="Build Status" src="https://github.com/skydoves/Pokedex/workflows/Android%20CI/badge.svg"/></a> 
 </p>
 
 <p align="center">  
