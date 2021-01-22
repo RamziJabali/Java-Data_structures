@@ -7,10 +7,19 @@
 This poject was to replicate Java built-in data structures for educational purposes.</p>
 </br>
  
-### RChar<T>
-- add(T)
-- remove(T)
-
+### RChar
+- getValueOf()
+- toUpperCase()
+- isDigit()
+- isLetter()
+- isEmpty()
+- isSpace()
+- isLowerCase()
+- isUpperCase()
+- toLowerCase()
+- toUpperCase()
+  
+  
 ### RArrayList<T>
 - add(T)
 - removeData(T)
