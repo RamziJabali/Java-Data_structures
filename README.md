@@ -42,6 +42,5 @@ This poject was to replicate Java built-in data structures for educational purpo
 - removeData(T)
 - showTree()
 
-### JUnit Tests
-- Wrote JUnit tests for all classes and methods.
-
+## Libraries
+- [JUnit](https://junit.org/junit5/)
