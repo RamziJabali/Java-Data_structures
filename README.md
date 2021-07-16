@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">  
-This poject was to replicate Java built-in data structures for educational purposes.</p>
+This project was to replicate Java built-in data structures for educational purposes.</p>
 </br>
  
 ### RChar
